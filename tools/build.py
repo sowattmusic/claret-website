@@ -19,7 +19,7 @@ from bs4 import BeautifulSoup
 from PIL import Image
 
 # ---- settings ---------------------------------------------------------------
-SITE_URL = "https://www.YOUR-DOMAIN.ch"   # final domain, no trailing slash
+SITE_URL = "https://claretproductions.com"   # final domain, no trailing slash
 GOOGLE_VERIFICATION = ""   # optional: content of Google's <meta name="google-site-verification">
 BING_VERIFICATION = ""     # optional: content of Bing's <meta name="msvalidate.01">
 # -----------------------------------------------------------------------------

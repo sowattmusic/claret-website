@@ -42,7 +42,7 @@ Header (CLARET wordmark, nav, EN/FR) → Hero → My Story → Gallery → Servi
 
 - **Edit `src/index.src.html`, never `index.html` or `fr/index.html` directly.** Every text exists there in both languages as `<span lang="en">` / `<span lang="fr">`; always edit both.
 - Then run `python3 tools/build.py` (needs `beautifulsoup4` and `Pillow`). It writes `index.html` (English, `/`) and `fr/index.html` (French, `/fr/`), each with only its own language, plus titles, descriptions, canonical/hreflang, Open Graph/Twitter tags, JSON-LD, image sizes, `sitemap.xml`, `robots.txt`, `site.webmanifest`, and `dist/claret-site-upload.zip` (only the public files).
-- `SITE_URL` at the top of `tools/build.py` must be the real domain before uploading (still a placeholder).
+- Domain: **https://claretproductions.com** (no www; `.htaccess` redirects www to it). Set as `SITE_URL` in `tools/build.py`.
 - `tools/make_images.py` regenerates the share cards (`img/share-en.jpg`, `img/share-fr.jpg`) and the icons from `img/portrait.jpg` and the fonts in `tools/fonts/`.
 - `.htaccess`: https, no-www, caching, compression, 404 page, blocks `src/`, `tools/`, `*.md` if uploaded by mistake.
 - SEO steps that need Enzo's accounts (Google Search Console, Bing, share-preview checks, backlinks): `SEO-GUIDE.md`.
@@ -54,5 +54,5 @@ Header (CLARET wordmark, nav, EN/FR) → Hero → My Story → Gallery → Servi
 
 1. Legal notice (Impressum) and privacy policy page — needs Sowatt Media Sàrl's address.
 2. Photo of Enzo with Lady O by Delphine Broggio for the Press section (credit the photographer).
-3. Choose the domain; set `SITE_URL` in `tools/build.py`, rebuild, upload; then follow `SEO-GUIDE.md`.
+3. Upload to claretproductions.com on N0C, then follow `SEO-GUIDE.md` (Search Console, Bing, backlinks).
 4. Later (2027 release): real cover for "Just the Same", release section, newsletter sign-up.

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.YOUR-DOMAIN.ch/</loc>
+    <loc>https://claretproductions.com/</loc>
     <lastmod>2026-11-09</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.YOUR-DOMAIN.ch/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.YOUR-DOMAIN.ch/fr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.YOUR-DOMAIN.ch/"/>
-    <image:image><image:loc>https://www.YOUR-DOMAIN.ch/img/portrait.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="en" href="https://claretproductions.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claretproductions.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://claretproductions.com/"/>
+    <image:image><image:loc>https://claretproductions.com/img/portrait.jpg</image:loc></image:image>
   </url>
   <url>
-    <loc>https://www.YOUR-DOMAIN.ch/fr/</loc>
+    <loc>https://claretproductions.com/fr/</loc>
     <lastmod>2026-11-09</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.YOUR-DOMAIN.ch/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.YOUR-DOMAIN.ch/fr/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.YOUR-DOMAIN.ch/"/>
-    <image:image><image:loc>https://www.YOUR-DOMAIN.ch/img/portrait.jpg</image:loc></image:image>
+    <xhtml:link rel="alternate" hreflang="en" href="https://claretproductions.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://claretproductions.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://claretproductions.com/"/>
+    <image:image><image:loc>https://claretproductions.com/img/portrait.jpg</image:loc></image:image>
   </url>
 </urlset>
