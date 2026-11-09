@@ -93,8 +93,10 @@ nav.main a:hover{box-shadow:inset 0 -2px 0 var(--wine)}
   .btn-main{height:56px}
   .btn-quiet{text-align:center}
   .latest{display:none}
-  .hero .art{position:relative;width:100%;height:clamp(440px,128vw,640px);margin-top:-8px}
-  .hero .art img{-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 26%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 26%,#000 82%,transparent 100%);-webkit-mask-composite:source-over;mask-composite:add;object-position:50% 30%}
+  .hero{display:flex;flex-direction:column}
+  .hero .art{order:-1;position:relative;width:100%;height:clamp(460px,130vw,660px);margin:0}
+  .hero .art img{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);-webkit-mask-composite:source-over;mask-composite:add;object-position:50% 25%}
+  .hero .wrap{margin-top:-56px;padding-bottom:28px}
   .hero-after{display:block!important}
 }
 .hero-after{display:none;border-bottom:1px solid var(--ink)}
@@ -310,7 +312,7 @@ footer.end a:hover{color:var(--ivory)}
       </p>
       <div class="ctas">
         <a class="btn-main" href="#work"><svg width="14" height="14" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen to my work</span><span lang="fr">Écouter mon travail</span></a>
-        <a class="btn-quiet" href="#contact"><span lang="en">Work with me →</span><span lang="fr">Travailler avec moi →</span></a>
+        <a class="btn-quiet" href="#contact"><span lang="en">Work with me →︎</span><span lang="fr">Travailler avec moi →︎</span></a>
       </div>
       <div class="latest">
         <img src="img/cover-tdenon.jpg" alt="">
@@ -318,7 +320,7 @@ footer.end a:hover{color:var(--ivory)}
           <span class="lbl w"><span lang="en">Latest record</span><span lang="fr">Dernier disque</span></span>
           <span style="font-size:15px;font-weight:600">TDenon — <i>Colosse aux Pieds d’Argiles</i> · 2026</span>
         </div>
-        <a class="lbl" href="https://open.spotify.com/search/TDenon%20Colosse%20aux%20Pieds%20d%27Argiles" target="_blank" rel="noopener"><span lang="en">Listen ↗</span><span lang="fr">Écouter ↗</span></a>
+        <a class="lbl" href="https://open.spotify.com/search/TDenon%20Colosse%20aux%20Pieds%20d%27Argiles" target="_blank" rel="noopener"><span lang="en">Listen ↗︎</span><span lang="fr">Écouter ↗︎</span></a>
       </div>
     </div>
     <div class="hero-spacer"></div>
@@ -407,7 +409,7 @@ footer.end a:hover{color:var(--ivory)}
       <h3 style="margin-top:10px"><span lang="en">One team, from the first idea to the master</span><span lang="fr">Une équipe, de la première idée au master</span></h3>
       <p><span lang="en">I’m an associate at Sowatt Music, a studio and production company in Crissier. I lead the artistic side: production, composition, arrangement and artistic direction. My partner Michel Gallone leads the technical side: recording, mixing and mastering. Together we can take a project all the way, under one roof.</span><span lang="en"> Beyond records, Sowatt also records live concerts and handles audiovisual work, including video transcription and multilingual subtitling for cultural institutions, educational projects and production companies.</span><span lang="fr">Je suis associé de Sowatt Music, studio et société de production à Crissier. J’y porte le volet artistique : production, composition, arrangement et direction artistique. Mon associé Michel Gallone porte le volet technique : enregistrement, mixage et mastering. Ensemble, nous menons un projet de bout en bout, sous un même toit.</span><span lang="fr"> Au-delà du disque, Sowatt enregistre des concerts live et prend en charge des travaux audiovisuels, dont la transcription vidéo et le sous-titrage multilingue pour des institutions culturelles, des projets éducatifs et des sociétés de production.</span></p>
     </div>
-    <a class="btn-line" href="https://sowattmedia.com" target="_blank" rel="noopener">sowattmedia.com ↗</a>
+    <a class="btn-line" href="https://sowattmedia.com" target="_blank" rel="noopener">sowattmedia.com ↗︎</a>
   </div>
 </section>
 
@@ -418,7 +420,7 @@ footer.end a:hover{color:var(--ivory)}
       <h2 class="wm"><span lang="en">Selected Work</span><span lang="fr">Productions</span></h2>
       <div class="side">
         <span class="lbl"><span lang="en">Records · Scores · Songs</span><span lang="fr">Disques · Musiques · Chansons</span></span>
-        <a class="link-u" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener" style="font-size:15px"><span lang="en">Full credits on Muso.ai ↗</span><span lang="fr">Tous les crédits sur Muso.ai ↗</span></a>
+        <a class="link-u" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener" style="font-size:15px"><span lang="en">Full credits on Muso.ai ↗︎</span><span lang="fr">Tous les crédits sur Muso.ai ↗︎</span></a>
       </div>
     </div>
 
@@ -452,7 +454,7 @@ footer.end a:hover{color:var(--ivory)}
         <p class="role"><span lang="en">Producer, composer, arranger, keyboards and programming</span><span lang="fr">Producteur, compositeur, arrangeur, claviers et programmation</span></p>
         <div class="acts">
           <a class="act" href="https://open.spotify.com/search/TDenon%20Colosse%20aux%20Pieds%20d%27Argiles" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen · Spotify</span><span lang="fr">Écouter · Spotify</span></a>
-          <a class="act q" href="#tdenon"><span lang="en">Behind the record ↓</span><span lang="fr">Les coulisses ↓</span></a>
+          <a class="act q" href="#tdenon"><span lang="en">Behind the record ↓︎</span><span lang="fr">Les coulisses ↓︎</span></a>
         </div>
       </article>
 
@@ -499,7 +501,7 @@ footer.end a:hover{color:var(--ivory)}
     <a class="muso" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener">
       <span class="wm"><span lang="en">All my credits</span><span lang="fr">Tous mes crédits</span></span>
       <p><span lang="en">My full list of credits, with my role on each track, is on Muso.ai.</span><span lang="fr">La liste complète de mes crédits, avec mon rôle sur chaque titre, est sur Muso.ai.</span></p>
-      <span class="btn-line"><span lang="en">See all credits on Muso.ai ↗</span><span lang="fr">Voir tous les crédits sur Muso.ai ↗</span></span>
+      <span class="btn-line"><span lang="en">See all credits on Muso.ai ↗︎</span><span lang="fr">Voir tous les crédits sur Muso.ai ↗︎</span></span>
     </a>
   </div>
 </section>
@@ -521,7 +523,7 @@ footer.end a:hover{color:var(--ivory)}
           <p class="pull"><span lang="en">“I’m gonna make an orchestra.”</span><span lang="fr">« Je vais faire un orchestre. »</span></p>
           <p><span lang="en">Those couple of touches turned into a symphonic ending.</span><span lang="fr">Ces quelques touches sont devenues une fin symphonique.</span></p>
         </div>
-        <a class="lbl lnk" href="https://open.spotify.com/search/TDenon%20Colosse%20aux%20Pieds%20d%27Argiles" target="_blank" rel="noopener"><span lang="en">Listen to the album on Spotify ↗</span><span lang="fr">Écouter l’album sur Spotify ↗</span></a>
+        <a class="lbl lnk" href="https://open.spotify.com/search/TDenon%20Colosse%20aux%20Pieds%20d%27Argiles" target="_blank" rel="noopener"><span lang="en">Listen to the album on Spotify ↗︎</span><span lang="fr">Écouter l’album sur Spotify ↗︎</span></a>
       </div>
     </div>
   </div>
@@ -538,7 +540,7 @@ footer.end a:hover{color:var(--ivory)}
       <figure class="q">
         <div class="mk" aria-hidden="true">“</div>
         <blockquote><span lang="en">He was in charge of the whole production, added his touch, was staying true to my vision and answering my many requests.</span><span lang="fr">Il a pris en charge toute la production, a apporté sa touche, est resté fidèle à ma vision et a répondu à mes nombreuses demandes.</span></blockquote>
-        <figcaption><b>TDenon</b><span lang="en">Artist, <i>Colosse aux Pieds d’Argiles</i> · from his album presentation video</span><span lang="fr">Artiste, <i>Colosse aux Pieds d’Argiles</i> · extrait de sa vidéo de présentation</span><br><a class="watch" href="https://www.youtube.com/watch?v=6F4UV0RGobQ&amp;t=294s" target="_blank" rel="noopener"><span lang="en">Watch 4:54–5:16 ↗</span><span lang="fr">Voir 4:54–5:16 ↗</span></a></figcaption>
+        <figcaption><b>TDenon</b><span lang="en">Artist, <i>Colosse aux Pieds d’Argiles</i> · from his album presentation video</span><span lang="fr">Artiste, <i>Colosse aux Pieds d’Argiles</i> · extrait de sa vidéo de présentation</span><br><a class="watch" href="https://www.youtube.com/watch?v=6F4UV0RGobQ&amp;t=294s" target="_blank" rel="noopener"><span lang="en">Watch 4:54–5:16 ↗︎</span><span lang="fr">Voir 4:54–5:16 ↗︎</span></a></figcaption>
       </figure>
       <figure class="q">
         <div class="mk" aria-hidden="true">“</div>
@@ -583,7 +585,7 @@ footer.end a:hover{color:var(--ivory)}
       <div style="min-width:0">
         <h3 class="press-title">Musique : la finale du Tremplin 2025 s’implante dans le district</h3>
         <p class="press-sum"><span lang="en">A feature on the Le Tremplin 2025 final, with Lady O, a finalist that year and now the winner of The Voice France 2026, and on the finalists’ song I composed for the competition.</span><span lang="fr">Un article sur la finale du Tremplin 2025, avec Lady O, finaliste cette année-là et aujourd’hui gagnante de The Voice France 2026, et sur la chanson des finalistes que j’ai composée pour le concours.</span></p>
-        <a class="btn-line" href="https://www.le-courrier.ch/musique-la-finale-du-tremplin-2025-simplante-dans-le-district/" target="_blank" rel="noopener" style="margin-top:22px"><span lang="en">Read the article ↗</span><span lang="fr">Lire l’article ↗</span></a>
+        <a class="btn-line" href="https://www.le-courrier.ch/musique-la-finale-du-tremplin-2025-simplante-dans-le-district/" target="_blank" rel="noopener" style="margin-top:22px"><span lang="en">Read the article ↗︎</span><span lang="fr">Lire l’article ↗︎</span></a>
       </div>
     </div>
   </div>
@@ -602,11 +604,11 @@ footer.end a:hover{color:var(--ivory)}
           <div class="dline"><span class="lbl"><span lang="en">Phone</span><span lang="fr">Téléphone</span></span><a class="dval" href="tel:+41786286970">+41 78 628 69 70</a><button type="button" class="copy" id="copy-tel" data-copy="+41 78 628 69 70"><span lang="en">Copy</span><span lang="fr">Copier</span></button></div>
         </div>
         <div class="socials">
-          <a class="act q" href="https://open.spotify.com/artist/1uDa3JW4VfFCaDoBEyHoE4" target="_blank" rel="noopener">Spotify ↗</a>
-          <a class="act q" href="https://music.apple.com/ch/artist/claret/1808065472" target="_blank" rel="noopener">Apple Music ↗</a>
-          <a class="act q" href="https://www.instagram.com/itsclaret" target="_blank" rel="noopener">Instagram ↗</a>
-          <a class="act q" href="https://www.linkedin.com/in/enzo-claret-901866233/" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="act q" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener">Muso.ai ↗</a>
+          <a class="act q" href="https://open.spotify.com/artist/1uDa3JW4VfFCaDoBEyHoE4" target="_blank" rel="noopener">Spotify ↗︎</a>
+          <a class="act q" href="https://music.apple.com/ch/artist/claret/1808065472" target="_blank" rel="noopener">Apple Music ↗︎</a>
+          <a class="act q" href="https://www.instagram.com/itsclaret" target="_blank" rel="noopener">Instagram ↗︎</a>
+          <a class="act q" href="https://www.linkedin.com/in/enzo-claret-901866233/" target="_blank" rel="noopener">LinkedIn ↗︎</a>
+          <a class="act q" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener">Muso.ai ↗︎</a>
         </div>
       </div>
       <form id="contact-form" action="contact.php" method="post" novalidate>
@@ -675,7 +677,7 @@ footer.end a:hover{color:var(--ivory)}
   function sel(b){var t=b.previousElementSibling,r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r)}
   document.querySelectorAll('.copy').forEach(function(b){
     b.addEventListener('click',function(){
-      var v=b.getAttribute('data-copy'),o=b.innerHTML,done=function(){b.textContent='✓';setTimeout(function(){b.innerHTML=o},1400)};
+      var v=b.getAttribute('data-copy'),o=b.innerHTML,done=function(){b.textContent='✓︎';setTimeout(function(){b.innerHTML=o},1400)};
       try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(e){sel(b)}
     });
   });
