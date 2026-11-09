@@ -1,0 +1,38 @@
+CLARET — site web prêt à mettre en ligne (N0C / PlanetHoster)
+=============================================================
+
+Contenu du dossier
+------------------
+index.html     la page du site (EN/FR)
+contact.php    envoie les messages du formulaire à enzo@sowattmedia.com
+favicon.svg    l'icône de l'onglet
+img/           photos et pochettes
+audio/         l'extrait de "Just the Same"
+
+Mise en ligne sur N0C
+---------------------
+1. Connectez-vous à N0C (mg.n0c.com) avec le compte Sowatt.
+2. Domaines : ajoutez le domaine du site (ou un sous-domaine pour tester,
+   par ex. claret.sowattmedia.com). N0C crée un dossier pour ce domaine.
+3. Fichiers > Gestionnaire de fichiers : ouvrez le dossier de ce domaine
+   (le "Document root" indiqué dans Domaines).
+4. Téléversez le fichier claret-website.zip, puis clic droit > Extraire.
+   Déplacez le CONTENU du dossier claret-website (index.html, img, audio…)
+   directement dans le dossier du domaine, pas dans un sous-dossier.
+5. Sécurité > SSL/TLS : vérifiez que le certificat gratuit (Let's Encrypt)
+   est actif pour le domaine, afin que le site s'ouvre en https.
+6. Testez : ouvrez le site, changez la langue, lancez l'extrait audio,
+   et envoyez-vous un message avec le formulaire.
+
+Si le formulaire n'arrive pas
+-----------------------------
+Regardez dans les spams d'enzo@sowattmedia.com. Si rien n'arrive, demandez
+à Michel de vérifier dans N0C que l'envoi d'e-mails PHP est autorisé pour
+le domaine (les messages partent de no-reply@<votre-domaine>).
+
+Encore à faire avant l'ouverture officielle
+-------------------------------------------
+- Mentions légales et politique de confidentialité (adresse de la société).
+- Liens Spotify directs pour Ce Soir, Colosse aux Pieds d'Argiles et
+  Courant éclair (pour l'instant, recherche Spotify).
+- Photo avec Lady O (Delphine Broggio) pour la section Presse.
