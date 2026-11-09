@@ -2,13 +2,20 @@
 
 Bilingual (English / French) one-page portfolio for **CLARET**, the professional and recording name of Enzo Claret: record producer, songwriter & composer, artistic director, associate at Sowatt Music.
 
-It is a plain static site (HTML, CSS, a little JavaScript) plus one PHP file for the contact form. No build step, no framework.
+It is a plain static site (HTML, CSS, a little JavaScript) plus one PHP file for the contact form. A small Python script builds the English (`/`) and French (`/fr/`) pages from one source file.
+
+**Workflow:** edit `src/index.src.html` → run `python3 tools/build.py` → upload the contents of `dist/claret-site-upload.zip` to N0C. SEO steps: see `SEO-GUIDE.md`.
 
 ## Files
 
 | Path | What it is |
 |---|---|
-| `index.html` | The whole site: content in both languages, styles and scripts |
+| `src/index.src.html` | **Source**: the whole page in both languages — edit this one |
+| `index.html`, `fr/index.html` | Built English and French pages (generated, don't edit) |
+| `tools/build.py` | Builds the pages, SEO tags, sitemap, robots.txt and the upload zip |
+| `tools/make_images.py` | Regenerates share images and icons |
+| `404.html`, `.htaccess` | Error page and Apache settings (https, caching, redirects) |
+| `SEO-GUIDE.md` | Google Search Console, Bing, share previews, backlinks |
 | `contact.php` | Sends contact-form messages to enzo@sowattmedia.com |
 | `favicon.svg` | Browser-tab icon |
 | `img/` | Portrait, session photo, gallery photos, covers, Sowatt logo |

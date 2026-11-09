@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CLARET — Record producer, songwriter &amp; artistic director</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CLARET">
+<meta property="og:description" content="Record producer, songwriter &amp; composer, artistic director. Switzerland · London.">
+<meta property="og:image" content="img/portrait.jpg">
+<meta name="description" content="CLARET — record producer, songwriter & composer, artistic director. Switzerland · London.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..700&display=swap">
+<style>
+/* Layout: an independent record sleeve as a portfolio — 1970s magazine-cover confidence, square edges, thin rules, catalogue of covers. Single deliberate ivory look. */
+:root{
+  --ivory:#F4EFE6; --ivory-2:#EAE3D7; --ink:#171515; --ink-2:#2E2A29; --muted:#5B5552; --rule:#CFC7BB;
+  --wine:#682638; --night:#171515; --night-text:#E6DFD3; --night-muted:#B8B0A6; --night-rule:#4A4443;
+  --display:"League Gothic","Oswald","Arial Narrow",Impact,sans-serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --g:clamp(20px,4.45vw,64px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto} *{transition:none!important}}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--ivory)}
+[data-lang="en"] [lang="fr"], [data-lang="fr"] [lang="en"]{display:none!important}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+p{margin:0}
+h1,h2,h3{margin:0;font-weight:400}
+.wrap{padding-left:max(var(--g),env(safe-area-inset-left,0px));padding-right:max(var(--g),env(safe-area-inset-right,0px));max-width:1440px;margin:0 auto}
+.wm{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.84;letter-spacing:.002em;text-wrap:balance}
+.lbl{font:600 12px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.muted{color:var(--muted)}
+
+img{max-width:100%}
+[hidden]{display:none!important}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.vframe{position:relative;aspect-ratio:16/9;background:#000}
+.vframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vlink{display:inline-block;margin-top:12px;color:var(--night-muted);text-decoration:none}
+.vlink:hover{color:var(--ivory)}
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--ivory);border-bottom:1px solid var(--ink)}
+header.top .wrap{display:flex;align-items:center;gap:32px;height:72px}
+.brand{font:400 30px/1 var(--display);letter-spacing:.06em;text-decoration:none}
+nav.main{display:flex;gap:30px;margin-left:auto}
+nav.main a{text-decoration:none;padding:6px 0}
+nav.main a:hover{box-shadow:inset 0 -2px 0 var(--wine)}
+.langs{display:flex;border:1px solid var(--ink)}
+.langs a{display:grid;place-items:center;height:36px;width:46px;text-decoration:none;color:var(--ink)}
+.langs a:hover{background:var(--ivory-2)}
+.langs a[aria-current="page"]{background:var(--ink);color:var(--ivory)}
+.menu-btn{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;place-items:center;margin-right:-10px}
+.mnav{border-top:1px solid var(--ink);background:var(--ivory)}
+.mnav a{display:block;padding:14px 0;border-bottom:1px solid var(--rule);text-decoration:none;font:400 30px/1 var(--display);text-transform:uppercase}
+@media (max-width:980px){nav.main{display:none}.langs{margin-left:auto}.menu-btn{display:grid}header.top .wrap{gap:12px;height:60px}.brand{font-size:26px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--ink)}
+.hero .art{position:absolute;top:0;right:0;bottom:0;width:min(57%,820px);z-index:0}
+.hero .art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 30%;display:block;filter:saturate(1.05);
+  -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.2) 12%,rgba(0,0,0,.65) 26%,#000 44%),linear-gradient(to top,transparent 0%,#000 18%);-webkit-mask-composite:source-in;
+  mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.2) 12%,rgba(0,0,0,.65) 26%,#000 44%),linear-gradient(to top,transparent 0%,#000 18%);mask-composite:intersect}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:7fr 5fr;min-height:clamp(720px,62vw,860px)}
+.hero-copy{display:flex;flex-direction:column;padding-block:48px 56px;padding-right:48px;min-width:0}
+.kicker{display:flex;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+.hero h1{font-size:clamp(150px,22vw,318px);margin:28px 0 0 -.025em;line-height:.82}
+.roles{margin-top:22px;font:600 clamp(19px,1.8vw,26px)/1.25 var(--sans);font-variation-settings:"wdth" 88;letter-spacing:-.01em}
+.roles .sl{color:var(--wine)}
+.intro{margin-top:18px;font-size:18px;line-height:1.55;max-width:50ch;color:var(--ink-2)}
+.ctas{display:flex;align-items:center;gap:28px;margin-top:34px;flex-wrap:wrap}
+.btn-main{display:inline-flex;align-items:center;justify-content:center;gap:14px;height:60px;padding:0 30px;background:var(--wine);color:var(--ivory);text-decoration:none;font:700 15px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.btn-main:hover{background:#56202F;color:var(--ivory)}
+.btn-quiet{font:600 15px/1 var(--sans);letter-spacing:.04em;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px;padding:12px 0}
+.latest{display:flex;align-items:center;gap:16px;margin-top:auto;padding-top:18px;border-top:1px solid var(--rule)}
+.latest img{width:56px;height:56px;object-fit:cover;flex:none;display:block}
+.latest .t{display:flex;flex-direction:column;gap:3px;min-width:0}
+.latest .lbl.w{color:var(--wine)}
+.latest a{margin-left:auto;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:3px;flex:none}
+.hero-spacer{min-width:0}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero-spacer{display:none}
+  .hero-copy{padding:20px 0 0}
+  .hero h1{font-size:clamp(120px,38vw,240px);margin-top:18px}
+  .intro{display:none}
+  .ctas{flex-direction:column;align-items:stretch;gap:6px;margin-top:22px}
+  .btn-main{height:56px}
+  .btn-quiet{text-align:center}
+  .latest{display:none}
+  .hero{display:flex;flex-direction:column}
+  .hero .art{order:-1;position:relative;width:100%;height:clamp(460px,130vw,660px);margin:0}
+  .hero .art img{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 72%,transparent 100%);-webkit-mask-composite:source-over;mask-composite:add;object-position:50% 25%}
+  .hero .wrap{margin-top:-56px;padding-bottom:28px}
+  .hero-after{display:block!important}
+}
+.hero-after{display:none;border-bottom:1px solid var(--ink)}
+.hero-after .wrap{padding-block:4px 28px}
+.hero-after .latest{display:flex;margin-top:20px}
+
+/* section frame */
+section.sec > .wrap{padding-block:clamp(72px,8vw,112px)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-bottom:20px;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+.sec-head h2{font-size:clamp(76px,9.2vw,132px)}
+.sec-head .side{display:flex;flex-direction:column;align-items:flex-end;gap:8px;padding-bottom:10px}
+@media (max-width:640px){.sec-head .side{align-items:flex-start}}
+.link-u{font-weight:600;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+
+/* story */
+.story{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,72px);margin-top:48px}
+.lede{font:400 clamp(40px,4.6vw,64px)/.95 var(--display);text-transform:uppercase;max-width:16ch}
+.story-text{display:grid;gap:18px;margin-top:32px;max-width:60ch;font-size:18px;line-height:1.65;color:var(--ink-2)}
+.story-text p:first-child::first-letter{float:left;font:400 108px/.78 var(--display);color:var(--wine);margin:6px 12px 0 0}
+.story-fig{margin:0;align-self:start}
+.story-fig img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+.story-fig figcaption{margin-top:12px;padding-top:10px;border-top:1px solid var(--ink);font-size:13px;color:var(--muted);line-height:1.45}
+@media (max-width:860px){.story{grid-template-columns:1fr}.story-fig img{aspect-ratio:4/3}}
+
+/* gallery */
+.gallery-sec{border-top:1px solid var(--ink)}
+.gallery-sec .wrap{padding-block:clamp(40px,5vw,64px)}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:dense;gap:12px}
+.g{margin:0;position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--ivory-2);min-width:0}
+.g.wide{grid-column:span 2;aspect-ratio:auto}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.g:hover img{transform:scale(1.03)}
+.g figcaption{position:absolute;left:12px;right:12px;bottom:10px;font:600 11px/1.35 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:#F4EFE6;text-shadow:0 1px 8px rgba(0,0,0,.75)}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.g.wide{aspect-ratio:2/1}}
+
+/* services */
+.svc{list-style:none;margin:0;padding:0}
+.svc li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;padding:24px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.svc h3{font:400 clamp(30px,3vw,40px)/.95 var(--display);text-transform:uppercase}
+.svc p{color:var(--ink-2);max-width:60ch}
+.av{display:flex;gap:24px;align-items:baseline;flex-wrap:wrap;padding:20px 0 0}
+.av p{flex:1 1 360px;color:var(--muted);font-size:15px;min-width:0}
+@media (max-width:760px){.svc li{grid-template-columns:1fr;gap:8px}}
+
+/* sowatt band */
+.sowatt{background:var(--night);color:var(--ivory)}
+.sowatt .wrap{display:grid;grid-template-columns:240px minmax(0,1fr) auto;gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(48px,6vw,72px)}
+.sowatt img{display:block;width:100%;max-width:220px;height:auto}
+.sowatt h3{font:400 clamp(40px,4.4vw,60px)/.92 var(--display);text-transform:uppercase}
+.sowatt p{margin-top:14px;color:var(--night-text);max-width:62ch}
+.sowatt .lbl{color:var(--night-muted)}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:48px;padding:0 20px;border:1px solid currentColor;text-decoration:none;font:700 13px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.sowatt .btn-line{color:var(--ivory)}
+.sowatt .btn-line:hover{background:var(--ivory);color:var(--night)}
+@media (max-width:900px){.sowatt .wrap{grid-template-columns:1fr}.sowatt img{max-width:170px}.sowatt .btn-line{justify-self:start}}
+
+/* catalogue */
+.cat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:40px;row-gap:72px;margin-top:48px}
+@media (max-width:1100px){.cat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.cat{grid-template-columns:1fr;row-gap:56px}}
+.card{display:flex;flex-direction:column;min-width:0}
+.cov{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--ivory-2)}
+.meta{display:flex;justify-content:space-between;gap:12px;padding:16px 0 10px;border-bottom:1px solid var(--ink)}
+.meta .w{color:var(--wine)}
+.ttl{font-size:clamp(40px,3.3vw,48px);line-height:.95;padding-top:14px}
+.who{font-size:15px;font-weight:600;margin-top:10px}
+.role{font-size:14px;color:var(--muted);margin-top:4px;line-height:1.45}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.act{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 16px;border:1px solid var(--ink);text-decoration:none;font:700 13px/1.1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.act:hover{background:var(--ink);color:var(--ivory)}
+.act.q{border-color:var(--rule);font-weight:600}
+.act svg{flex:none}
+@media (max-width:640px){.acts{flex-direction:column}.act{min-height:48px}}
+.record{width:100%;aspect-ratio:1/1;background:var(--wine);display:flex;align-items:center;justify-content:center}
+.record .disc{width:58%;aspect-ratio:1/1;border-radius:50%;background:repeating-radial-gradient(circle,#F4EFE6 0 5px,#E9E1D4 5px 6px);display:flex;align-items:center;justify-content:center}
+.record .lab{width:32%;aspect-ratio:1/1;border-radius:50%;background:var(--wine);display:flex;align-items:center;justify-content:center}
+.record .hole{width:12%;aspect-ratio:1/1;border-radius:50%;background:#F4EFE6}
+.player{display:flex;align-items:center;gap:14px;margin-top:18px;height:56px;padding-right:16px;border:1px solid var(--ink)}
+.player button{width:56px;height:56px;margin:-1px 0 -1px -1px;border:0;background:var(--wine);color:var(--ivory);display:grid;place-items:center;cursor:pointer;flex:none}
+.player button:hover{background:#56202F}
+.player .bar{flex:1;min-width:0;height:2px;background:var(--rule);position:relative}
+.player .fill{position:absolute;left:0;top:0;height:2px;width:0;background:var(--wine)}
+.player .time{font-size:13px;font-variant-numeric:tabular-nums;color:var(--muted);flex:none}
+.muso{display:flex;align-items:center;gap:24px;margin-top:72px;padding:26px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);text-decoration:none;flex-wrap:wrap}
+.muso .wm{font-size:52px;line-height:1}
+.muso p{flex:1 1 320px;color:var(--muted);font-size:15px;min-width:0}
+.muso:hover .btn-line{background:var(--ink);color:var(--ivory)}
+
+/* behind the record */
+.btr{background:var(--night);color:var(--ivory)}
+.btr .wrap{padding-block:clamp(64px,7vw,104px)}
+.btr .kick{display:flex;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--night-rule)}
+.btr .kick .lbl:last-child{color:var(--night-muted)}
+.btr-grid{display:grid;grid-template-columns:7fr 5fr;gap:56px;margin-top:40px;align-items:start}
+.vcard{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;color:var(--ivory);text-decoration:none;background:#000}
+.vcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;opacity:.62;display:block;transition:opacity .3s}
+.vcard:hover img{opacity:.78}
+.vcard .pb{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:84px;height:84px;background:var(--wine);display:grid;place-items:center}
+.vcard .cap{position:absolute;left:24px;right:24px;bottom:20px;display:flex;justify-content:space-between;gap:16px;font-weight:600}
+.btr h2{font-size:clamp(56px,6vw,88px);line-height:.88}
+.btr-text{display:grid;gap:16px;margin-top:26px;color:var(--night-text)}
+.btr .pull{font:400 clamp(40px,3.8vw,56px)/.95 var(--display);text-transform:uppercase;padding-left:20px;border-left:3px solid var(--wine);color:var(--ivory);margin:10px 0}
+.btr .lnk{margin-top:32px;display:inline-block;text-decoration:none;border-bottom:1px solid var(--ivory);padding-bottom:4px}
+@media (max-width:900px){.btr-grid{grid-template-columns:1fr;gap:28px}.vcard .pb{width:60px;height:60px}.vcard .cap span:first-child{display:none}}
+
+/* quotes */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:48px}
+.q{margin:0;display:grid;grid-template-rows:auto 1fr auto;gap:18px;min-width:0}
+.q .mk{font:400 120px/.6 var(--display);color:var(--wine);height:44px}
+.q blockquote{margin:0;font:500 clamp(20px,1.7vw,24px)/1.4 var(--sans);font-variation-settings:"wdth" 92;letter-spacing:-.005em}
+.q figcaption{padding-top:14px;border-top:1px solid var(--ink);font-size:14px;color:var(--muted)}
+.q figcaption b{display:block;font:400 28px/1 var(--display);text-transform:uppercase;color:var(--ink);letter-spacing:.01em;margin-bottom:4px}
+.q .watch{display:inline-block;margin-top:8px;font:600 12px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--wine);text-decoration:none}
+.q .watch:hover{text-decoration:underline}
+.london{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,4fr);gap:40px;margin-top:72px;padding-top:28px;border-top:2px solid var(--ink)}
+.london .head h3{font:400 clamp(40px,4vw,56px)/.92 var(--display);text-transform:uppercase;margin-top:10px}
+.london .q blockquote{font-size:clamp(18px,1.4vw,20px)}
+@media (max-width:1000px){.quotes,.london{grid-template-columns:1fr}.quotes{gap:48px}}
+
+
+/* press */
+.press{border-top:2px solid var(--ink)}
+.press .wrap{padding-block:clamp(48px,6vw,80px)}
+.press-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,4vw,56px);align-items:start}
+.press-side{display:flex;flex-direction:column;gap:10px}
+.press-pub{font:400 clamp(44px,4.6vw,64px)/.9 var(--display);text-transform:uppercase}
+.press-title{font:600 clamp(24px,2.4vw,34px)/1.2 var(--sans);font-variation-settings:"wdth" 90;letter-spacing:-.01em;max-width:28ch}
+.press-sum{margin-top:16px;color:var(--ink-2);max-width:60ch}
+.press .btn-line{display:inline-flex}
+.press .btn-line:hover{background:var(--ink);color:var(--ivory)}
+@media (max-width:760px){.press-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{border-top:1px solid var(--ink)}
+.contact h2{font-size:clamp(84px,11vw,168px);line-height:.84;max-width:9ch}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);margin-top:40px}
+.contact .lead{font-size:19px;line-height:1.55;max-width:44ch;color:var(--ink-2)}
+.dl{margin-top:32px;display:grid}
+.dline{display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid var(--ink);flex-wrap:wrap}
+.dline:last-child{border-bottom:1px solid var(--ink)}
+.dline .lbl{width:110px;flex:none}
+.dval{flex:1;min-width:0;font-size:18px;font-weight:600;text-decoration:none;overflow-wrap:anywhere;user-select:all}
+.copy{height:36px;padding:0 12px;border:1px solid var(--rule);background:transparent;color:var(--muted);font:600 11px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.copy:hover{border-color:var(--ink);color:var(--ink)}
+.socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+form{display:grid;gap:18px;align-content:start}
+.field{display:grid;gap:8px}
+input,textarea{font:400 17px/1.5 var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:10px 0;width:100%}
+input:focus,textarea:focus{outline:none;border-bottom:2px solid var(--wine);padding-bottom:9px}
+textarea{min-height:150px;resize:vertical}
+.formnote{font-size:14px;color:var(--muted)}
+.formnote.ok{color:var(--wine)}
+form .btn-main{border:0;cursor:pointer;justify-self:start}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}form .btn-main{justify-self:stretch}}
+
+footer.end{background:var(--night);color:var(--night-muted)}
+footer.end .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-block:28px}
+footer.end .brand{color:var(--ivory)}
+footer.end a{text-decoration:none}
+footer.end a:hover{color:var(--ivory)}
+</style>
+</head>
+<body>
+<div id="site" data-lang="en">
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">CLARET</a>
+    <nav class="main" aria-label="Sections">
+      <a class="lbl" href="#story"><span lang="en">My Story</span><span lang="fr">Mon histoire</span></a>
+      <a class="lbl" href="#services">Services</a>
+      <a class="lbl" href="#work"><span lang="en">Selected Work</span><span lang="fr">Productions</span></a>
+      <a class="lbl" href="#words"><span lang="en">In Their Words</span><span lang="fr">Ils en parlent</span></a>
+      <a class="lbl" href="#contact">Contact</a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <a class="lbl" id="btn-en" href="{{URL_EN}}" hreflang="en">EN</a>
+      <a class="lbl" id="btn-fr" href="{{URL_FR}}" hreflang="fr">FR</a>
+    </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mnav" aria-label="Menu">
+      <svg width="22" height="14" viewBox="0 0 22 14" aria-hidden="true"><path d="M0 1h22M0 7h22M0 13h22" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+    </button>
+  </div>
+  <div class="mnav" id="mnav" hidden>
+    <div class="wrap" style="padding-block:4px 16px">
+      <a href="#story"><span lang="en">My Story</span><span lang="fr">Mon histoire</span></a>
+      <a href="#services">Services</a>
+      <a href="#work"><span lang="en">Selected Work</span><span lang="fr">Productions</span></a>
+      <a href="#words"><span lang="en">In Their Words</span><span lang="fr">Ils en parlent</span></a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="kicker">
+        <span class="lbl"><span lang="en">Switzerland · London</span><span lang="fr">Suisse · Londres</span></span>
+        <a class="lbl" href="#sowatt" style="text-decoration:none"><span lang="en">Associate · Sowatt Music</span><span lang="fr">Associé · Sowatt Music</span></a>
+      </div>
+      <h1 class="wm">Claret</h1>
+      <p class="roles">
+        <span lang="en">Record producer <span class="sl">/</span> Songwriter &amp; composer <span class="sl">/</span> Artistic director</span>
+        <span lang="fr">Producteur <span class="sl">/</span> Auteur-compositeur <span class="sl">/</span> Directeur artistique</span>
+      </p>
+      <p class="intro">
+        <span lang="en">I help artists turn song ideas into finished records and compose original music for film, television and campaigns, working between Switzerland and London.</span>
+        <span lang="fr">J’aide les artistes à transformer une idée de chanson en disque abouti et je compose de la musique originale pour le cinéma, la télévision et la publicité, entre la Suisse et Londres.</span>
+      </p>
+      <div class="ctas">
+        <a class="btn-main" href="#work"><svg width="14" height="14" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen to my work</span><span lang="fr">Écouter mon travail</span></a>
+        <a class="btn-quiet" href="#contact"><span lang="en">Work with me →︎</span><span lang="fr">Travailler avec moi →︎</span></a>
+      </div>
+      <div class="latest">
+        <img src="img/cover-tdenon.jpg" alt="">
+        <div class="t">
+          <span class="lbl w"><span lang="en">Latest record</span><span lang="fr">Dernier disque</span></span>
+          <span style="font-size:15px;font-weight:600">TDenon — <i>Colosse aux Pieds d’Argiles</i> · 2026</span>
+        </div>
+        <a class="lbl" href="https://open.spotify.com/album/7AsVykDO7uNFCSQ0mjvpzJ" target="_blank" rel="noopener"><span lang="en">Listen ↗︎</span><span lang="fr">Écouter ↗︎</span></a>
+      </div>
+    </div>
+    <div class="hero-spacer"></div>
+  </div>
+  <div class="art"><img src="img/portrait.jpg" alt="Claret, seated portrait in a striped shirt and floral tie"></div>
+</section>
+<div class="hero-after">
+  <div class="wrap">
+    <p class="intro" style="display:block;margin:0">
+      <span lang="en">I help artists turn song ideas into finished records and compose original music for film, television and campaigns, working between Switzerland and London.</span>
+      <span lang="fr">J’aide les artistes à transformer une idée de chanson en disque abouti et je compose de la musique originale pour le cinéma, la télévision et la publicité, entre la Suisse et Londres.</span>
+    </p>
+    <div class="latest">
+      <img src="img/cover-tdenon.jpg" alt="">
+      <div class="t">
+        <span class="lbl w"><span lang="en">Latest record</span><span lang="fr">Dernier disque</span></span>
+        <span style="font-size:14px;font-weight:600;line-height:1.3">TDenon — <i>Colosse aux Pieds d’Argiles</i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="sec" id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="wm"><span lang="en">My Story</span><span lang="fr">Mon histoire</span></h2>
+      <div class="side"><span class="lbl"><span lang="en">From Switzerland to London</span><span lang="fr">De la Suisse à Londres</span></span></div>
+    </div>
+    <div class="story">
+      <div>
+        <p class="lede"><span lang="en">In August 2025, I took my songs to Joe Lyons’ Palace Garden Studio in London.</span><span lang="fr">En août 2025, j’ai emmené mes chansons au Palace Garden Studio de Joe Lyons, à Londres.</span></p>
+        <div class="story-text">
+          <p><span lang="en">I’d written them only a few days before. Then a drummer, a bassist, a guitarist and a keyboard player started playing them, and I heard things in those songs I hadn’t heard yet.</span><span lang="fr">Je les avais écrites quelques jours plus tôt. Puis un batteur, un bassiste, un guitariste et un claviériste se sont mis à les jouer, et j’y ai entendu des choses que je n’avais pas encore entendues.</span></p>
+          <p><span lang="en">I was born in Sion, grew up in Lutry and started making music at ten. I grew up on the Beatles, James Brown and David Bowie.</span><span lang="fr">Je suis né à Sion, j’ai grandi à Lutry et j’ai commencé la musique à dix ans. J’ai été bercé par les Beatles, James Brown et David Bowie.</span></p>
+          <p><span lang="en">I started out at Swiss Artists Productions, arranging and writing for other artists. In 2025, I co-wrote, composed and produced “Ce Soir”, the official anthem of <i>Le Tremplin</i>.</span><span lang="fr">J’ai commencé chez Swiss Artists Productions, en arrangeant et en écrivant pour d’autres artistes. En 2025, j’ai co-écrit, composé et produit « Ce Soir », l’hymne officiel du <i>Tremplin</i>.</span></p>
+          <p><span lang="en">Today I’m a producer and artistic director at Sowatt Music. I like working out who should sing the first line, what happens when you take the guitar out, and which photo makes you want to hear the record.</span><span lang="fr">Aujourd’hui, je suis producteur et directeur artistique chez Sowatt Music. J’aime chercher qui doit chanter la première ligne, ce qui se passe quand on retire la guitare, et quelle photo donne envie d’écouter le disque.</span></p>
+        </div>
+      </div>
+      <figure class="story-fig">
+        <img src="img/palace-garden.jpg" alt="Claret with drummer Nuno Olivera and bassist Ollie Hopkins at Palace Garden Studios" loading="lazy">
+        <figcaption><span lang="en">With drummer Nuno Olivera and bassist Ollie Hopkins · Palace Garden Studios, London · August 2025</span><span lang="fr">Avec le batteur Nuno Olivera et le bassiste Ollie Hopkins · Palace Garden Studios, Londres · août 2025</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-sec" aria-label="Gallery">
+  <div class="wrap">
+    <div class="gallery">
+      <figure class="g"><img src="img/g-ties.jpg" alt="Claret against a textured wall, wearing several ties" loading="lazy" style="object-position:50% 20%"><figcaption><span lang="en">Portrait · Claret</span><span lang="fr">Portrait · Claret</span></figcaption></figure>
+      <figure class="g wide"><img src="img/g-andrea-london.jpg" alt="Claret with ANDREA at a mixing console in London" loading="lazy"><figcaption><span lang="en">With ANDREA · London, January 2025</span><span lang="fr">Avec ANDREA · Londres, janvier 2025</span></figcaption></figure>
+      <figure class="g wide"><img src="img/g-tremplin.jpg" alt="Finalists and Claret on stage at Le Tremplin" loading="lazy" style="object-position:50% 58%"><figcaption><span lang="en">On stage at Le Tremplin</span><span lang="fr">Sur scène au Tremplin</span></figcaption></figure>
+      <figure class="g"><img src="img/g-tdgarden.jpg" alt="Claret working with headphones at TDGarden Studios" loading="lazy" style="object-position:30% 50%"><figcaption><span lang="en">TDGarden Studios · Switzerland, 2024</span><span lang="fr">TDGarden Studios · Suisse, 2024</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services" style="border-top:1px solid var(--ink)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="wm">Services</h2>
+      <div class="side"><span class="lbl"><span lang="en">Studio · Live</span><span lang="fr">Studio · Live</span></span></div>
+    </div>
+    <ul class="svc">
+      <li><h3><span lang="en">Record production</span><span lang="fr">Production de disques</span></h3><p><span lang="en">I produce singles, EPs and albums for solo artists, bands and labels. I can come in at the demo stage or take a project through pre-production, recording and delivery.</span><span lang="fr">Je produis des singles, des EP et des albums pour des artistes solo, des groupes et des labels. Je peux intervenir dès la maquette ou accompagner un projet de la préproduction à l’enregistrement, jusqu’à la livraison.</span></p></li>
+      <li><h3><span lang="en">Songwriting and composition</span><span lang="fr">Écriture et composition</span></h3><p><span lang="en">I co-write songs, melodies and lyrics with artists.</span><span lang="fr">J’écris des chansons, des mélodies et des textes avec les artistes.</span></p></li>
+      <li><h3><span lang="en">Original music for picture</span><span lang="fr">Musique originale pour l’image</span></h3><p><span lang="en">I compose scores and soundtracks for film, television, advertising and online video. I work with filmmakers, production companies, agencies and independent creators, writing everything from ambient underscore to experimental pieces built around a particular scene.</span><span lang="fr">Je compose des musiques pour le cinéma, la télévision, la publicité et la vidéo en ligne. Je travaille avec des cinéastes, des sociétés de production, des agences et des créateurs indépendants, de la nappe ambiante aux pièces expérimentales construites autour d’une scène.</span></p></li>
+      <li><h3>Arrangement</h3><p><span lang="en">I shape song structure, harmony, instrumentation and vocal parts for recordings and live performances.</span><span lang="fr">Je façonne la structure, l’harmonie, l’instrumentation et les parties vocales, pour le disque comme pour la scène.</span></p></li>
+      <li><h3><span lang="en">Artistic direction</span><span lang="fr">Direction artistique</span></h3><p><span lang="en">I help artists define the sound of a project, choose the songs and connect the music to the artwork, photography and video.</span><span lang="fr">J’aide les artistes à définir le son d’un projet, à choisir les chansons et à relier la musique à la pochette, aux photos et à la vidéo.</span></p></li>
+      <li><h3><span lang="en">Recording and vocal production</span><span lang="fr">Enregistrement et production vocale</span></h3><p><span lang="en">I run sessions, coach performances and work on vocal arrangements, harmonies and takes.</span><span lang="fr">Je dirige les sessions, j’accompagne les interprétations et je travaille les arrangements vocaux, les harmonies et les prises.</span></p></li>
+      <li><h3><span lang="en">Session planning</span><span lang="fr">Organisation de sessions</span></h3><p><span lang="en">I bring together musicians, studios and engineers for projects in Switzerland and London.</span><span lang="fr">Je réunis musiciens, studios et ingénieurs du son pour des projets en Suisse et à Londres.</span></p></li>
+      <li><h3><span lang="en">Live recording and live albums</span><span lang="fr">Captation live et albums live</span></h3><p><span lang="en">I record concerts and produce live albums, from the recording on the night to the finished release.</span><span lang="fr">J’enregistre des concerts et produis des albums live, de la captation le soir même jusqu’à la sortie.</span></p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOWATT -->
+<section class="sowatt" id="sowatt">
+  <div class="wrap">
+    <img src="img/sowatt-logo.png" alt="Sowatt Media" width="230" height="113">
+    <div style="min-width:0">
+      <span class="lbl"><span lang="en">Through Sowatt Music</span><span lang="fr">Avec Sowatt Music</span></span>
+      <h3 style="margin-top:10px"><span lang="en">One team, from the first idea to the master</span><span lang="fr">Une équipe, de la première idée au master</span></h3>
+      <p><span lang="en">I’m an associate at Sowatt Music, a studio and production company in Crissier. I lead the artistic side: production, composition, arrangement and artistic direction. My partner Michel Gallone leads the technical side: recording, mixing and mastering. Together we can take a project all the way, under one roof.</span><span lang="en"> Beyond records, Sowatt also records live concerts and handles audiovisual work, including video transcription and multilingual subtitling for cultural institutions, educational projects and production companies.</span><span lang="fr">Je suis associé de Sowatt Music, studio et société de production à Crissier. J’y porte le volet artistique : production, composition, arrangement et direction artistique. Mon associé Michel Gallone porte le volet technique : enregistrement, mixage et mastering. Ensemble, nous menons un projet de bout en bout, sous un même toit.</span><span lang="fr"> Au-delà du disque, Sowatt enregistre des concerts live et prend en charge des travaux audiovisuels, dont la transcription vidéo et le sous-titrage multilingue pour des institutions culturelles, des projets éducatifs et des sociétés de production.</span></p>
+    </div>
+    <a class="btn-line" href="https://sowattmedia.com" target="_blank" rel="noopener">sowattmedia.com ↗︎</a>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="wm"><span lang="en">Selected Work</span><span lang="fr">Productions</span></h2>
+      <div class="side">
+        <span class="lbl"><span lang="en">Records · Scores · Songs</span><span lang="fr">Disques · Musiques · Chansons</span></span>
+        <a class="link-u" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener" style="font-size:15px"><span lang="en">Full credits on Muso.ai ↗︎</span><span lang="fr">Tous les crédits sur Muso.ai ↗︎</span></a>
+      </div>
+    </div>
+
+    <div class="cat">
+      <article class="card">
+        <img class="cov" src="img/cover-ce-soir.jpg" alt="Le Tremplin 2025, Ce Soir cover" loading="lazy">
+        <div class="meta"><span class="lbl"><span lang="en">Season anthem</span><span lang="fr">Hymne de la saison</span></span><span class="lbl">2025</span></div>
+        <h3 class="wm ttl">Ce Soir</h3>
+        <p class="who">Claret &amp; Le Tremplin – Un Seul Juge : Le Public</p>
+        <p class="role" style="color:var(--ink)"><span lang="en">Sung by the finalists, including Lady O, winner of The Voice France 2026</span><span lang="fr">Chanté par les finalistes, dont Lady O, gagnante de The Voice France 2026</span></p>
+        <p class="role"><span lang="en">Producer, composer, arranger and co-writer</span><span lang="fr">Producteur, compositeur, arrangeur et co-auteur</span></p>
+        <div class="acts"><a class="act" href="https://open.spotify.com/album/7mt2lekloKtiXBDVb8fN7h" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen · Spotify</span><span lang="fr">Écouter · Spotify</span></a></div>
+      </article>
+
+      <article class="card">
+        <img class="cov" src="img/cover-didici.jpg" alt="Sarabds, DIDICI artwork" loading="lazy">
+        <div class="meta"><span class="lbl"><span lang="en">Four-track EP</span><span lang="fr">EP quatre titres</span></span><span class="lbl">2026</span></div>
+        <h3 class="wm ttl">DIDICI</h3>
+        <p class="who">Sarabds</p>
+        <p class="role"><span lang="en">Producer, composer, arranger, keyboards and programming</span><span lang="fr">Producteur, compositeur, arrangeur, claviers et programmation</span></p>
+        <div class="acts">
+          <a class="act" href="https://open.spotify.com/album/1Ozzs9QpYH70COvhqe1ca3" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen · Spotify</span><span lang="fr">Écouter · Spotify</span></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="cov" src="img/cover-tdenon.jpg" alt="TDenon, Colosse aux Pieds d’Argiles cover" loading="lazy">
+        <div class="meta"><span class="lbl">Album</span><span class="lbl">2026</span></div>
+        <h3 class="wm ttl">Colosse aux Pieds d’Argiles</h3>
+        <p class="who">TDenon</p>
+        <p class="role"><span lang="en">Producer, composer, arranger, keyboards and programming</span><span lang="fr">Producteur, compositeur, arrangeur, claviers et programmation</span></p>
+        <div class="acts">
+          <a class="act" href="https://open.spotify.com/album/7AsVykDO7uNFCSQ0mjvpzJ" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen · Spotify</span><span lang="fr">Écouter · Spotify</span></a>
+          <a class="act q" href="#tdenon"><span lang="en">Behind the record ↓︎</span><span lang="fr">Les coulisses ↓︎</span></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img class="cov" src="img/cover-courant-eclair.jpg" alt="Jules Loewert, Courant éclair cover" loading="lazy">
+        <div class="meta"><span class="lbl">Single</span><span class="lbl">2025</span></div>
+        <h3 class="wm ttl">Courant éclair</h3>
+        <p class="who">Jules Loewert</p>
+        <p class="role"><span lang="en">Co-composer</span><span lang="fr">Co-compositeur</span></p>
+        <div class="acts"><a class="act" href="https://open.spotify.com/album/5jG03w1rYiY9EXe7vU3KWZ" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Listen · Spotify</span><span lang="fr">Écouter · Spotify</span></a></div>
+      </article>
+
+      <article class="card">
+        <img class="cov" src="img/cover-nihil.jpg" alt="Gravv channel artwork" loading="lazy">
+        <div class="meta"><span class="lbl"><span lang="en">Music for YouTube</span><span lang="fr">Musique pour YouTube</span></span><span class="lbl"><span lang="en">Ongoing</span><span lang="fr">En cours</span></span></div>
+        <h3 class="wm ttl">NIHIL</h3>
+        <p class="who"><a href="https://www.youtube.com/@gravvtv" target="_blank" rel="noopener" style="text-decoration:none">Gravv</a> · <span lang="en">independent channel, ~25,000 subscribers</span><span lang="fr">chaîne indépendante, ~25 000 abonnés</span></p>
+        <p class="role"><span lang="en">Lead composer · ambient soundscapes to experimental soundtrack pieces</span><span lang="fr">Compositeur principal · des paysages sonores ambiants aux pièces expérimentales</span></p>
+        <div class="acts">
+          <a class="act" href="https://www.youtube.com/playlist?list=PLNlvs0F0BOUZnhxIEeZMrFIq0jYIx6DYc" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Watch · NIHIL 1</span><span lang="fr">Voir · NIHIL 1</span></a>
+          <a class="act" href="https://www.youtube.com/playlist?list=PLNlvs0F0BOUbWBCUf3G4XP9Jxiks_EhY0" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg><span lang="en">Watch · NIHIL 2</span><span lang="fr">Voir · NIHIL 2</span></a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="record" role="img" aria-label="Placeholder artwork for Just the Same"><div class="disc"><div class="lab"><div class="hole"></div></div></div></div>
+        <div class="meta"><span class="lbl w"><span lang="en">Unreleased · Out in 2027</span><span lang="fr">Inédit · sortie en 2027</span></span><span class="lbl"><span lang="en">Recorded 2025</span><span lang="fr">Enregistré en 2025</span></span></div>
+        <h3 class="wm ttl">Just the Same</h3>
+        <p class="who">Claret</p>
+        <p class="role"><span lang="en">Writer, composer, arranger, producer, recording engineer and lead vocals · recorded in London</span><span lang="fr">Auteur, compositeur, arrangeur, producteur, ingénieur du son et chant · enregistré à Londres</span></p>
+        <div class="player">
+          <button type="button" id="play-jts" aria-label="Play excerpt of Just the Same">
+            <svg class="i-play" width="14" height="14" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>
+            <svg class="i-pause" width="14" height="14" viewBox="0 0 12 12" aria-hidden="true" hidden><path d="M2 1h3v10H2zM7 1h3v10H7z" fill="currentColor"/></svg>
+          </button>
+          <span class="lbl"><span lang="en">Play excerpt</span><span lang="fr">Écouter l’extrait</span></span>
+          <div class="bar" aria-hidden="true"><div class="fill" id="jts-fill"></div></div>
+          <span class="time" id="jts-time">0:20</span>
+          <audio id="jts-audio" src="audio/just-the-same.mp3" preload="metadata"></audio>
+        </div>
+      </article>
+    </div>
+
+    <a class="muso" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener">
+      <span class="wm"><span lang="en">All my credits</span><span lang="fr">Tous mes crédits</span></span>
+      <p><span lang="en">My full list of credits, with my role on each track, is on Muso.ai.</span><span lang="fr">La liste complète de mes crédits, avec mon rôle sur chaque titre, est sur Muso.ai.</span></p>
+      <span class="btn-line"><span lang="en">See all credits on Muso.ai ↗︎</span><span lang="fr">Voir tous les crédits sur Muso.ai ↗︎</span></span>
+    </a>
+  </div>
+</section>
+
+<!-- BEHIND THE RECORD -->
+<section class="btr" id="tdenon">
+  <div class="wrap">
+    <div class="kick"><span class="lbl"><span lang="en">Behind the record</span><span lang="fr">Les coulisses du disque</span></span><span class="lbl">TDenon · Album · 2026</span></div>
+    <div class="btr-grid">
+      <div>
+        <div class="vframe"><iframe src="https://www.youtube-nocookie.com/embed/6F4UV0RGobQ?start=721&amp;end=778&amp;rel=0" title="TDenon on Siegfried and the orchestral ending" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <a class="lbl vlink" href="https://www.youtube.com/watch?v=6F4UV0RGobQ&amp;t=721s" target="_blank" rel="noopener"><span lang="en">TDenon on “Siegfried” and the orchestral ending · 12:01–12:58 ↗</span><span lang="fr">TDenon sur « Siegfried » et la fin orchestrale · 12:01–12:58 ↗</span></a>
+      </div>
+      <div style="min-width:0">
+        <h2 class="wm">Colosse aux Pieds d’Argiles</h2>
+        <div class="btr-text">
+          <p><span lang="en">TDenon wanted an epic track. The result was “Siegfried,” a piece in three parts, each with its own musical identity. He says he still can’t fit it into a single genre.</span><span lang="fr">TDenon voulait un morceau épique. Le résultat, c’est « Siegfried », une pièce en trois parties, chacune avec sa propre identité musicale. Il dit qu’il n’arrive toujours pas à la ranger dans un seul genre.</span></p>
+          <p><span lang="en">For the album closer, we were talking about adding a couple of touches to the ending. As TDenon tells it, I put on my headphones, took them off about fifteen minutes later and said:</span><span lang="fr">Pour le dernier titre de l’album, on parlait d’ajouter quelques touches à la fin. Comme le raconte TDenon, j’ai mis mon casque, je l’ai retiré un quart d’heure plus tard et j’ai dit :</span></p>
+          <p class="pull"><span lang="en">“I’m gonna make an orchestra.”</span><span lang="fr">« Je vais faire un orchestre. »</span></p>
+          <p><span lang="en">Those couple of touches turned into a symphonic ending.</span><span lang="fr">Ces quelques touches sont devenues une fin symphonique.</span></p>
+        </div>
+        <a class="lbl lnk" href="https://open.spotify.com/album/7AsVykDO7uNFCSQ0mjvpzJ" target="_blank" rel="noopener"><span lang="en">Listen to the album on Spotify ↗︎</span><span lang="fr">Écouter l’album sur Spotify ↗︎</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORDS -->
+<section class="sec" id="words">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="wm"><span lang="en">In Their Words</span><span lang="fr">Ils en parlent</span></h2>
+      <div class="side"><span class="lbl"><span lang="en">Artists &amp; filmmakers</span><span lang="fr">Artistes &amp; cinéastes</span></span></div>
+    </div>
+    <div class="quotes">
+      <figure class="q">
+        <div class="mk" aria-hidden="true">“</div>
+        <blockquote><span lang="en">He was in charge of the whole production, added his touch, was staying true to my vision and answering my many requests.</span><span lang="fr">Il a pris en charge toute la production, a apporté sa touche, est resté fidèle à ma vision et a répondu à mes nombreuses demandes.</span></blockquote>
+        <figcaption><b>TDenon</b><span lang="en">Artist, <i>Colosse aux Pieds d’Argiles</i> · from his album presentation video</span><span lang="fr">Artiste, <i>Colosse aux Pieds d’Argiles</i> · extrait de sa vidéo de présentation</span><br><a class="watch" href="https://www.youtube.com/watch?v=6F4UV0RGobQ&amp;t=294s" target="_blank" rel="noopener"><span lang="en">Watch 4:54–5:16 ↗︎</span><span lang="fr">Voir 4:54–5:16 ↗︎</span></a></figcaption>
+      </figure>
+      <figure class="q">
+        <div class="mk" aria-hidden="true">“</div>
+        <blockquote><span lang="fr">Depuis que nous travaillons ensemble, Enzo a su poser une direction artistique claire, cohérente avec mon univers.</span><span lang="en">Since we started working together, Enzo has set a clear artistic direction that fits my world.</span></blockquote>
+        <figcaption><b>Jules Loewert</b><span lang="en">Artist · artistic direction</span><span lang="fr">Artiste · direction artistique</span></figcaption>
+      </figure>
+      <figure class="q">
+        <div class="mk" aria-hidden="true">“</div>
+        <blockquote><span lang="fr">J’ai eu la chance de travailler avec Enzo Claret pour mon premier métrage et sa capacité à comprendre et réaliser mes idées ainsi qu’apporter sa propre identité en fait à ce jour ma meilleure collaboration avec un artiste musical.</span><span lang="en">I was lucky to work with Enzo Claret on my first film. His ability to understand and bring my ideas to life, while adding his own identity, makes it my best collaboration with a musical artist to date.</span></blockquote>
+        <figcaption><b>Claudio Castillo</b><span lang="en">Filmmaker · music for his first film</span><span lang="fr">Réalisateur · musique de son premier film</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="london">
+      <div class="head">
+        <span class="lbl">Palace Garden Studios · 2025</span>
+        <h3><span lang="en">From the London sessions</span><span lang="fr">Des sessions de Londres</span></h3>
+      </div>
+      <figure class="q">
+        <div class="mk" aria-hidden="true">“</div>
+        <blockquote><span lang="en">Enzo’s ideas are inspiring and his input during the recording session was thoughtful and considered.</span><span lang="fr">Les idées d’Enzo sont inspirantes, et ses indications pendant la session d’enregistrement étaient réfléchies et pertinentes.</span></blockquote>
+        <figcaption><b>Ollie Hopkins</b><span lang="en">Bassist</span><span lang="fr">Bassiste</span></figcaption>
+      </figure>
+      <figure class="q">
+        <div class="mk" aria-hidden="true">“</div>
+        <blockquote><span lang="en">He always knew exactly what he wanted, but also gave me room to bring my own ideas. The guitar parts were fun to record, especially the wilder moments.</span><span lang="fr">Il savait toujours exactement ce qu’il voulait, tout en me laissant la place d’apporter mes propres idées. Les parties de guitare étaient un plaisir à enregistrer, surtout les moments les plus fous.</span></blockquote>
+        <figcaption><b>Phil Donnelly</b><span lang="en">Guitarist</span><span lang="fr">Guitariste</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section class="press" id="press">
+  <div class="wrap">
+    <div class="press-grid">
+      <div class="press-side">
+        <span class="lbl"><span lang="en">Press</span><span lang="fr">Presse</span></span>
+        <span class="press-pub">Le Courrier</span>
+        <span class="lbl muted"><span lang="en">27 March 2025</span><span lang="fr">27 mars 2025</span></span>
+      </div>
+      <div style="min-width:0">
+        <h3 class="press-title">Musique : la finale du Tremplin 2025 s’implante dans le district</h3>
+        <p class="press-sum"><span lang="en">A feature on the Le Tremplin 2025 final, with Lady O, a finalist that year and now the winner of The Voice France 2026, and on the finalists’ song I composed for the competition.</span><span lang="fr">Un article sur la finale du Tremplin 2025, avec Lady O, finaliste cette année-là et aujourd’hui gagnante de The Voice France 2026, et sur la chanson des finalistes que j’ai composée pour le concours.</span></p>
+        <a class="btn-line" href="https://www.le-courrier.ch/musique-la-finale-du-tremplin-2025-simplante-dans-le-district/" target="_blank" rel="noopener" style="margin-top:22px"><span lang="en">Read the article ↗︎</span><span lang="fr">Lire l’article ↗︎</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <span class="lbl">Contact</span>
+    <h2 class="wm" style="margin-top:16px"><span lang="en">Tell me about your project</span><span lang="fr">Parlez-moi de votre projet</span></h2>
+    <div class="contact-grid">
+      <div>
+        <p class="lead"><span lang="en">If you have a song, a record or a film in mind, tell me what you’re making, where you are in the process and what you’d like to work on together.</span><span lang="fr">Si vous avez en tête une chanson, un disque ou un film, dites-moi ce que vous préparez, où vous en êtes et sur quoi vous aimeriez travailler ensemble.</span></p>
+        <div class="dl">
+          <div class="dline"><span class="lbl">Email</span><span class="dval">enzo@sowattmedia.com</span><button type="button" class="copy" id="copy-mail" data-copy="enzo@sowattmedia.com"><span lang="en">Copy</span><span lang="fr">Copier</span></button></div>
+          <div class="dline"><span class="lbl"><span lang="en">Phone</span><span lang="fr">Téléphone</span></span><a class="dval" href="tel:+41786286970">+41 78 628 69 70</a><button type="button" class="copy" id="copy-tel" data-copy="+41 78 628 69 70"><span lang="en">Copy</span><span lang="fr">Copier</span></button></div>
+        </div>
+        <div class="socials">
+          <a class="act q" href="https://open.spotify.com/artist/1uDa3JW4VfFCaDoBEyHoE4" target="_blank" rel="noopener">Spotify ↗︎</a>
+          <a class="act q" href="https://music.apple.com/ch/artist/claret/1808065472" target="_blank" rel="noopener">Apple Music ↗︎</a>
+          <a class="act q" href="https://www.instagram.com/itsclaret" target="_blank" rel="noopener">Instagram ↗︎</a>
+          <a class="act q" href="https://www.linkedin.com/in/enzo-claret-901866233/" target="_blank" rel="noopener">LinkedIn ↗︎</a>
+          <a class="act q" href="https://credits.muso.ai/profile/d6ebee4e-29ee-4048-905b-eb54b84a2853/credits" target="_blank" rel="noopener">Muso.ai ↗︎</a>
+        </div>
+      </div>
+      <form id="contact-form" action="contact.php" method="post" novalidate>
+        <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="field"><label class="lbl" for="f-name"><span lang="en">Name</span><span lang="fr">Nom</span></label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label class="lbl" for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label class="lbl" for="f-project"><span lang="en">Project details</span><span lang="fr">Votre projet</span></label><textarea id="f-project" name="project" required data-ph-en="What you’re making, where you are in the process, what you’d like to do together" data-ph-fr="Ce que vous préparez, où vous en êtes, ce que vous aimeriez faire ensemble"></textarea></div>
+        <button class="btn-main" type="submit"><span lang="en">Send</span><span lang="fr">Envoyer</span></button>
+        <p class="formnote" id="form-note" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="end">
+  <div class="wrap">
+    <a class="brand" href="#top">CLARET</a>
+    <span class="lbl">© 2026 Enzo Claret · <a href="https://sowattmedia.com" target="_blank" rel="noopener">Sowatt Media</a></span>
+    <span class="lbl"><span lang="en">Switzerland · London</span><span lang="fr">Suisse · Londres</span></span>
+  </div>
+</footer>
+</div>
+
+<script>
+(function(){
+  var site=document.getElementById('site');
+  var msgs={
+    missing:{en:'Please fill in your name, a valid email and a few words about your project.',fr:'Merci d’indiquer votre nom, un e-mail valide et quelques mots sur votre projet.'},
+    sending:{en:'Sending…',fr:'Envoi…'},
+    sent:{en:'Thank you. Your message has been sent, and I’ll get back to you soon.',fr:'Merci. Votre message a bien été envoyé, je vous réponds rapidement.'},
+    error:{en:'The message could not be sent. Please email me directly at enzo@sowattmedia.com.',fr:'Le message n’a pas pu être envoyé. Écrivez-moi directement à enzo@sowattmedia.com.'}
+  };
+  function showNote(k){var n=document.getElementById('form-note');n.dataset.state=k;n.textContent=msgs[k][site.getAttribute('data-lang')];n.className='formnote'+(k==='sent'?' ok':'')}
+  // language is fixed per page (/ = English, /fr/ = French)
+  var L=site.getAttribute('data-lang');
+  document.querySelectorAll('[data-ph-en]').forEach(function(el){el.placeholder=el.getAttribute('data-ph-'+L)});
+
+  // mobile menu
+  var mb=document.getElementById('menu-btn'), mn=document.getElementById('mnav');
+  mb.addEventListener('click',function(){var open=mn.hidden;mn.hidden=!open;mb.setAttribute('aria-expanded',String(open))});
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.hidden=true;mb.setAttribute('aria-expanded','false')})});
+
+  // Just the Same player
+  var au=document.getElementById('jts-audio'), pb=document.getElementById('play-jts'), tm=document.getElementById('jts-time'), fl=document.getElementById('jts-fill');
+  function fmt(s){s=Math.max(0,Math.round(s||0));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')}
+  function icon(p){pb.querySelector('.i-play').hidden=p;pb.querySelector('.i-pause').hidden=!p}
+  au.addEventListener('loadedmetadata',function(){tm.textContent=fmt(au.duration)});
+  au.addEventListener('timeupdate',function(){var p=au.duration?au.currentTime/au.duration:0;fl.style.width=(p*100)+'%';tm.textContent=fmt(au.duration-au.currentTime)});
+  au.addEventListener('play',function(){icon(true)});
+  au.addEventListener('pause',function(){icon(false)});
+  au.addEventListener('ended',function(){icon(false);au.currentTime=0;fl.style.width='0';tm.textContent=fmt(au.duration)});
+  pb.addEventListener('click',function(){if(au.paused){var r=au.play();if(r&&r.catch)r.catch(function(){icon(false)})}else au.pause()});
+
+  // copy buttons
+  function sel(b){var t=b.previousElementSibling,r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-copy'),o=b.innerHTML,done=function(){b.textContent='✓︎';setTimeout(function(){b.innerHTML=o},1400)};
+      try{navigator.clipboard.writeText(v).then(done,function(){sel(b)})}catch(e){sel(b)}
+    });
+  });
+
+  // contact form -> contact.php
+  var form=document.getElementById('contact-form');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var g=function(id){return document.getElementById(id).value.trim()};
+    if(!(g('f-name')&&/\S+@\S+\.\S+/.test(g('f-email'))&&g('f-project'))){showNote('missing');return}
+    var btn=form.querySelector('button[type=submit]');btn.disabled=true;showNote('sending');
+    var fd=new FormData(form);fd.append('lang',site.getAttribute('data-lang'));
+    fetch('contact.php',{method:'POST',body:fd}).then(function(r){return r.json()}).then(function(j){
+      if(j&&j.ok){showNote('sent');form.reset()}else{showNote(j&&j.error==='invalid'?'missing':'error')}
+    }).catch(function(){showNote('error')}).then(function(){btn.disabled=false});
+  });
+})();
+</script>
+</body>
+</html>
