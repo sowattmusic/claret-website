@@ -40,4 +40,4 @@ The site has two pages: English at `/` (`index.html`) and French at `/fr/` (`fr/
 
 ## History
 
-Every published version is saved as a git tag (`v1.0`, `v2.0`, …) and described in `CHANGELOG.md`. To look at an old version on GitHub, open the repository, click the branch menu, then **Tags**. Old versions are not kept in a folder, so they can never be uploaded to the server by mistake.
+Every version is a commit in the GitHub history and is described, with its commit ID, in `CHANGELOG.md`. To look at an old version, open `https://github.com/sowattmusic/claret-website/tree/<commit ID>`, or create a GitHub Release for it so it appears under **Tags**. Old versions are not kept in a folder, so they can never be uploaded to the server by mistake.

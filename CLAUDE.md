@@ -44,7 +44,7 @@ Header (CLARET wordmark, nav, EN/FR) → Hero → My Story → Gallery → Servi
 - SEO in the `<head>` of both pages: canonical + hreflang links, Open Graph/Twitter tags with absolute URLs (`img/share-en.jpg`, `img/share-fr.jpg`, 1200×630), JSON-LD (WebSite, ProfilePage, Person). Update `dateModified` in the JSON-LD and `<lastmod>` in `sitemap.xml` when content changes.
 - Other files: `404.html` (custom not-found page), `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.ico`/`favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`.
 - The server also has an `.htaccess` (www → non-www redirect, 404 page) that is **not in the repo**: it can't be downloaded from outside. Don't overwrite or delete it when uploading.
-- History: each published version is a git tag (`v1.0` original upload, `v2.0` live sync). See `CHANGELOG.md`.
+- History: every version is a commit; `CHANGELOG.md` lists each version with its commit ID (v1.0 = `d44f185` original upload, v2.0 = live sync). Claude sessions can't push tags, so the owner creates them as GitHub Releases if wanted.
 - `contact.php` uses PHP `mail()`; the form posts to it with `fetch` and shows messages in both languages. A hidden "website" field traps spam bots.
 - The TDenon excerpt (12:01–12:58) is embedded from youtube-nocookie; his testimonial links to 4:54–5:16 of the same video (6F4UV0RGobQ).
 - Hosting: N0C (PlanetHoster), the same as michelgallone.ch and Route 108. Upload the files to the domain's document root.
