@@ -39,7 +39,12 @@ Header (CLARET wordmark, nav, EN/FR) → Hero → My Story → Gallery → Servi
 
 ## Technical notes
 
-- Every text exists in both languages as `<span lang="en">` / `<span lang="fr">`; the switch sets `data-lang` on `#site`. Always edit both.
+- Live site: **https://claretproductions.com** (N0C server `nodels65-eu.n0c.com`). Since v2.0 the repo mirrors what is live.
+- Two pages: English at `/` (`index.html`) and French at `/fr/` (`fr/index.html`). The EN/FR buttons are links between them. Each page still carries `<span lang="en">` / `<span lang="fr">` markup for its own language, and `data-lang` on `#site`. **Any text or layout change must be made in both files.**
+- SEO in the `<head>` of both pages: canonical + hreflang links, Open Graph/Twitter tags with absolute URLs (`img/share-en.jpg`, `img/share-fr.jpg`, 1200×630), JSON-LD (WebSite, ProfilePage, Person). Update `dateModified` in the JSON-LD and `<lastmod>` in `sitemap.xml` when content changes.
+- Other files: `404.html` (custom not-found page), `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.ico`/`favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`.
+- The server also has an `.htaccess` (www → non-www redirect, 404 page) that is **not in the repo**: it can't be downloaded from outside. Don't overwrite or delete it when uploading.
+- History: each published version is a git tag (`v1.0` original upload, `v2.0` live sync). See `CHANGELOG.md`.
 - `contact.php` uses PHP `mail()`; the form posts to it with `fetch` and shows messages in both languages. A hidden "website" field traps spam bots.
 - The TDenon excerpt (12:01–12:58) is embedded from youtube-nocookie; his testimonial links to 4:54–5:16 of the same video (6F4UV0RGobQ).
 - Hosting: N0C (PlanetHoster), the same as michelgallone.ch and Route 108. Upload the files to the domain's document root.
@@ -49,5 +54,6 @@ Header (CLARET wordmark, nav, EN/FR) → Hero → My Story → Gallery → Servi
 1. Legal notice (Impressum) and privacy policy page — needs Sowatt Media Sàrl's address.
 2. Direct Spotify links for Ce Soir, Colosse aux Pieds d'Argiles and Courant éclair (currently Spotify search links).
 3. Photo of Enzo with Lady O by Delphine Broggio for the Press section (credit the photographer).
-4. Choose the domain; then set absolute URLs for `og:image` and add a sitemap.
+4. ~~Choose the domain; absolute `og:image` URLs; sitemap~~ — done (claretproductions.com).
+6. Contact form: messages don't arrive. Switch `contact.php` from PHP `mail()` to SMTP (PHPMailer) with a mailbox on N0C, and add an SPF record for claretproductions.com and sowattmedia.com (neither has one as of 10 Nov 2026).
 5. Later (2027 release): real cover for "Just the Same", release section, newsletter sign-up.

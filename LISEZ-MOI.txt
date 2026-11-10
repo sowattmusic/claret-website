@@ -3,7 +3,10 @@ CLARET — site web prêt à mettre en ligne (N0C / PlanetHoster)
 
 Contenu du dossier
 ------------------
-index.html     la page du site (EN/FR)
+index.html     la page en anglais (claretproductions.com/)
+fr/            la page en français (claretproductions.com/fr/)
+404.html       la page « introuvable »
+robots.txt, sitemap.xml, site.webmanifest, icônes (favicon, icon-*.png)
 contact.php    envoie les messages du formulaire à enzo@sowattmedia.com
 favicon.svg    l'icône de l'onglet
 img/           photos et pochettes
@@ -17,7 +20,7 @@ Mise en ligne sur N0C
 3. Fichiers > Gestionnaire de fichiers : ouvrez le dossier de ce domaine
    (le "Document root" indiqué dans Domaines).
 4. Téléversez le fichier claret-website.zip, puis clic droit > Extraire.
-   Déplacez le CONTENU du dossier claret-website (index.html, img, audio…)
+   Déplacez le CONTENU du dossier claret-website (index.html, fr, img, audio…)
    directement dans le dossier du domaine, pas dans un sous-dossier.
 5. Sécurité > SSL/TLS : vérifiez que le certificat gratuit (Let's Encrypt)
    est actif pour le domaine, afin que le site s'ouvre en https.

@@ -8,17 +8,21 @@ It is a plain static site (HTML, CSS, a little JavaScript) plus one PHP file for
 
 | Path | What it is |
 |---|---|
-| `index.html` | The whole site: content in both languages, styles and scripts |
+| `index.html` | English page (`/`): content, styles and scripts |
+| `fr/index.html` | French page (`/fr/`) |
+| `404.html` | Custom “page not found” page |
+| `robots.txt`, `sitemap.xml` | For search engines |
+| `site.webmanifest`, `favicon.*`, `apple-touch-icon.png`, `icon-*.png` | Icons for browsers and phones |
 | `contact.php` | Sends contact-form messages to enzo@sowattmedia.com |
 | `favicon.svg` | Browser-tab icon |
-| `img/` | Portrait, session photo, gallery photos, covers, Sowatt logo |
+| `img/` | Portrait, session photo, gallery photos, covers, Sowatt logo, share images (`share-en.jpg`, `share-fr.jpg`) |
 | `audio/just-the-same.mp3` | ~20-second excerpt of "Just the Same" |
 | `CLAUDE.md` | Project notes for Claude Code (design rules, content rules, open items) |
 | `LISEZ-MOI.txt` | Upload instructions in French |
 
 ## Preview locally
 
-Open `index.html` in a browser. Everything works except the contact form, which needs PHP (it works once the site is on N0C).
+Run `php -S localhost:8080` in this folder and open http://localhost:8080/ (English) and http://localhost:8080/fr/ (French). Opening the file directly also works, but the `/fr/` links and the contact form need a server.
 
 ## Publish on N0C (PlanetHoster)
 
@@ -32,4 +36,8 @@ If form messages don't arrive, check the spam folder of enzo@sowattmedia.com, th
 
 ## Language switch
 
-Every piece of text exists twice, as `<span lang="en">…</span><span lang="fr">…</span>`. The EN/FR buttons set `data-lang` on `#site`, and CSS hides the other language. When you add or change text, always update both languages.
+The site has two pages: English at `/` (`index.html`) and French at `/fr/` (`fr/index.html`). The EN/FR buttons link between them. When you add or change text or layout, always update both files.
+
+## History
+
+Every published version is saved as a git tag (`v1.0`, `v2.0`, …) and described in `CHANGELOG.md`. To look at an old version on GitHub, open the repository, click the branch menu, then **Tags**. Old versions are not kept in a folder, so they can never be uploaded to the server by mistake.
