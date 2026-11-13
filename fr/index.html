@@ -67,7 +67,7 @@
    "mainEntity": {
     "@id": "https://claretproductions.com/#person"
    },
-   "dateModified": "2026-11-09"
+   "dateModified": "2026-11-13"
   },
   {
    "@type": "Person",
@@ -160,7 +160,7 @@ img{max-width:100%;height:auto}
 .vlink:hover{color:var(--ivory)}
 /* header */
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--ivory);border-bottom:1px solid var(--ink)}
-header.top .wrap{display:flex;align-items:center;gap:32px;height:72px}
+header.top > .wrap{display:flex;align-items:center;gap:32px;height:72px}
 .brand{font:400 30px/1 var(--display);letter-spacing:.06em;text-decoration:none}
 nav.main{display:flex;gap:30px;margin-left:auto}
 nav.main a{text-decoration:none;padding:6px 0}
@@ -171,8 +171,11 @@ nav.main a:hover{box-shadow:inset 0 -2px 0 var(--wine)}
 .langs a[aria-current="page"]{background:var(--ink);color:var(--ivory)}
 .menu-btn{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;place-items:center;margin-right:-10px}
 .mnav{border-top:1px solid var(--ink);background:var(--ivory)}
-.mnav a{display:block;padding:14px 0;border-bottom:1px solid var(--rule);text-decoration:none;font:400 30px/1 var(--display);text-transform:uppercase}
-@media (max-width:980px){nav.main{display:none}.langs{margin-left:auto}.menu-btn{display:grid}header.top .wrap{gap:12px;height:60px}.brand{font-size:26px}}
+.mnav .wrap{display:block;padding-block:0 8px}
+.mnav a{display:flex;align-items:center;min-height:52px;border-bottom:1px solid var(--rule);text-decoration:none;font:600 14px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.mnav a:last-child{border-bottom:0}
+.mnav a:hover,.mnav a:focus-visible{color:var(--wine)}
+@media (max-width:980px){nav.main{display:none}.langs{margin-left:auto}.menu-btn{display:grid}header.top > .wrap{gap:12px;height:60px}.brand{font-size:26px}}
 
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--ink)}
@@ -394,7 +397,7 @@ footer.end a:hover{color:var(--ivory)}
 </button>
 </div>
 <div class="mnav" hidden="" id="mnav">
-<div class="wrap" style="padding-block:4px 16px">
+<div class="wrap">
 <a href="#story"><span lang="fr">Mon histoire</span></a>
 <a href="#services">Services</a>
 <a href="#work"><span lang="fr">Productions</span></a>
